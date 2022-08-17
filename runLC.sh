@@ -8,6 +8,19 @@ DOCKER_SETUP="--cap-add=NET_ADMIN --network dashboardsitespeedio_backend --shm-s
 DESKTOP_BROWSERS_DOCKER=(chrome firefox)
 EMULATED_MOBILE_BROWSERS=(chrome)
 
+# We loop through the desktop directory
+
+for file in testsLC/docker/desktop/*.{txt,js} ; do
+    for browser in "${DESKTOP_BROWSERS_DOCKER[@]}" ; do
+        FILENAME=$(basename -- "$file")
+        FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}"
+        CONFIG_FILE="config/$FILENAME_WITHOUT_EXTENSION.json"
+        [[ -f "$CONFIG_FILE" ]] && echo "Using config file $CONFIG_FILE" || echo "Missing config file $CONFIG_FILE"
+        docker run $DOCKER_SETUP $DOCKER_CONTAINER --config $CONFIG_FILE -b $browser $file
+        control
+    done
+done
+
 # We loop through the emulatedMobile directory
 
 for file in testsLC/docker/emulatedMobile/*.{txt,js} ; do
