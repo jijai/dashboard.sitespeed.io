@@ -1,0 +1,9 @@
+{
+  "extends": "./config/emulatedMobile.json",
+  "axe": {
+    "enable": true
+  },
+  "sustainable": {
+    "enable": true
+  }
+}

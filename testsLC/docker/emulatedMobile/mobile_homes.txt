@@ -1,0 +1,9 @@
+https://www.la-croix.com LaCroix
+https://www.lemonde.fr LeMonde
+https://www.lefigaro.fr LeFigaro
+https://www.liberation.fr Liberation
+https://www.francetvinfo.fr FrancetvInfo
+https://www.france24.com France24
+https://www.sudouest.fr SudOuest
+https://www.ouest-france.fr OuestFrance
+https://actu.orange.fr OrangeActus
