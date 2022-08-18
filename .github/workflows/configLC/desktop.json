@@ -1,0 +1,48 @@
+{
+  "extends": "/config/secrets.json",
+  "utc": true,
+  "browsertime": {
+    "connectivity": {
+      "engine": "throttle",
+      "profile": "cable"
+    },
+    "visualElements": true,
+    "iterations": 1,
+    "browser": "chrome",
+    "video": true,
+    "visualMetrics": true,
+    "visualMetricsPortable": true,
+    "videoParams": {
+      "thumbsize": 600
+    },
+    "chrome": {
+      "collectConsoleLog": true,
+      "enableTraceScreenshots": true
+    },
+    "firefox": {
+      "includeResponseBodies": "all",
+      "disableBrowsertimeExtension": true,
+      "geckoProfiler": true
+     }
+  },
+  "cpu": true,
+  "gzipHAR": true,
+  "html": {
+    "fetchHARFiles": true,
+    "showScript": true,
+    "compareURL": "https://compare.sitespeed.io/"
+  },
+  "screenshot": {
+    "type": "jpg"
+  },
+  "slug": "firstViewDocker",
+  "copyLatestFilesToBase": true,
+  "copyLatestFilesToBaseGraphiteNamespace": true,
+  "graphite": {
+    "namespace": "sitespeed_io.desktop",
+    "addSlugToKey": true
+  },
+  "thirdParty": {
+    "cpu": true
+  }
+}

@@ -14,7 +14,7 @@ for file in testsLC/docker/desktop/*.{txt,js} ; do
     for browser in "${DESKTOP_BROWSERS_DOCKER[@]}" ; do
         FILENAME=$(basename -- "$file")
         FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}"
-        CONFIG_FILE="config/$FILENAME_WITHOUT_EXTENSION.json"
+        CONFIG_FILE="configLC/$FILENAME_WITHOUT_EXTENSION.json"
         [[ -f "$CONFIG_FILE" ]] && echo "Using config file $CONFIG_FILE" || echo "Missing config file $CONFIG_FILE"
         docker run $DOCKER_SETUP $DOCKER_CONTAINER --config $CONFIG_FILE -b $browser $file
         control
@@ -27,7 +27,7 @@ for file in testsLC/docker/emulatedMobile/*.{txt,js} ; do
     for browser in "${EMULATED_MOBILE_BROWSERS[@]}" ; do
         FILENAME=$(basename -- "$file")
         FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}"
-        CONFIG_FILE="config/$FILENAME_WITHOUT_EXTENSION.json"
+        CONFIG_FILE="configLC/$FILENAME_WITHOUT_EXTENSION.json"
         [[ -f "$CONFIG_FILE" ]] && echo "Using config file $CONFIG_FILE" || echo "Missing config file $CONFIG_FILE"
         docker run $DOCKER_SETUP $DOCKER_CONTAINER --config $CONFIG_FILE -b $browser $file
         control
