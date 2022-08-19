@@ -37,7 +37,6 @@
   "screenshot": {
     "type": "jpg"
   },
-  "slug": "firstViewDocker",
   "copyLatestFilesToBase": true,
   "copyLatestFilesToBaseGraphiteNamespace": true,
   "graphite": {

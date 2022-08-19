@@ -1,5 +1,6 @@
 {
   "extends": "./config/emulatedMobile.json",
+  "slug": "firstViewDockerHomes",
   "axe": {
     "enable": true
   },
