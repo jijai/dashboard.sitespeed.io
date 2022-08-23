@@ -7,7 +7,7 @@
     },
     "mobile": true,
     "visualElements": true,
-    "iterations": 1,
+    "iterations": 3,
     "browser": "chrome",
     "video": true,
     "visualMetrics": true,
