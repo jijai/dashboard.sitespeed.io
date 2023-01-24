@@ -1,10 +1,11 @@
 #!/bin/bash
+cd "$(dirname "$0")"
 
 # We use the autobuild to always test our new functionality. But YOU should not do that!
 # Instead use the latest tagged version as the next row
 DOCKER_CONTAINER=sitespeedio/sitespeed.io:25.7.3-plus1
 
-DOCKER_SETUP="--cap-add=NET_ADMIN --network dashboardsitespeedio_backend --shm-size=2g --rm -v /config:/config -v "$(pwd)":/sitespeed.io -v /etc/localtime:/etc/localtime:ro -e MAX_OLD_SPACE_SIZE=3072 "
+DOCKER_SETUP="--cap-add=NET_ADMIN --network dashboardsitespeedio_backend --shm-size=4g --rm -v /config:/config -v "$(pwd)":/sitespeed.io -v /etc/localtime:/etc/localtime:ro -e MAX_OLD_SPACE_SIZE=3072 "
 DESKTOP_BROWSERS_DOCKER=(chrome firefox)
 EMULATED_MOBILE_BROWSERS=(chrome)
 
