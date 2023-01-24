@@ -21,8 +21,7 @@
     },
     "firefox": {
       "includeResponseBodies": "all",
-      "disableBrowsertimeExtension": true,
-      "geckoProfiler": true
+      "disableBrowsertimeExtension": true
      }
   },
   "cpu": true,
@@ -40,7 +39,8 @@
   "copyLatestFilesToBaseGraphiteNamespace": true,
   "graphite": {
     "namespace": "sitespeed_io.desktop",
-    "addSlugToKey": true
+    "addSlugToKey": true,
+    "messages": ["pageSummary", "run"]
   },
   "thirdParty": {
     "cpu": true
