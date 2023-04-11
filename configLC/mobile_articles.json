@@ -1,5 +1,5 @@
 {
-  "extends": "./config/emulatedMobile.json",
+  "extends": "./configLC/emulatedMobile.json",
   "slug": "firstViewDockerArticles",
   "axe": {
     "enable": true
