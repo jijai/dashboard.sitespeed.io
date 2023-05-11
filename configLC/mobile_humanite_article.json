@@ -1,0 +1,16 @@
+{
+  "extends": "./configLC/emulatedMobile.json",
+  "slug": "viewDockerArticleConsent",
+  "axe": {
+    "enable": true
+  },
+"browsertime": {
+    "connectivity": {
+      "engine": "throttle",
+      "profile": "4g"},
+      "cookie": "euconsent-v2=CPp9AAAPp9AAABcAIBENC_CgAP_AAH_AAAqIIyQLQABAALAAeABUADMAIAAhABUAC2AGgAagBEACaAFuAMIAxABygEGAQgAnQBSAC4AGOAPQAfoBAwCEAEdAJ4AVcAuoBgQDCAGiANeAbQBHoCXgExAJ_AUYAuYBeYDFwGMgMkAdQBAcCMgIyQGgAFgAPAAqABkAEEANAA1ACIAGIAPwAhAB-gEDAIQARYAjoBVwC6gGBANEAa8A2gCPQExALzAZIA5QAAA.x9P6RPI.4YpAMgBZAC6AGwAYgBxQD1gJLAeqBEQCUQEsQJagTOAwsBzIDpwJDIUFhQYCs8FmYLRwW-gudBeSDFIAIwA4AEAASACEAEYARgAwAIAAkA"
+    },
+  "sustainable": {
+    "enable": true
+  }
+}
